@@ -25,11 +25,11 @@ const Hero = () => {
   return (
     <div className="">
       <div className="p-10 text-center">
-        <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
+        <h1 className="text-2xl leading-[-3] md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans ">
           Hi I Am{" "}
-          <span className=" underline underline-offset-8 decoration-[#00e0ff] -rotate-10">
+          <span className=" underline underline-offset-8 decoration-main-blue -rotate-10">
             {""}
-            Aman
+            Aman ,
           </span>
           <br /> I'm <ColourfulText text="Software Developer" /> with a
           background in Full stack development, Devops, and{" "}
