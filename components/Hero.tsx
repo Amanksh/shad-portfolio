@@ -3,21 +3,6 @@ import ColourfulText from "./ui/colourful-text";
 import Link from "next/link";
 
 const Hero = () => {
-  const words = [
-    {
-      text: "Hi",
-    },
-    {
-      text: "I",
-    },
-    {
-      text: "Am",
-    },
-    {
-      text: "Aman 👋🏻",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-  ];
   return (
     <div className="">
       <div className="p-10 text-center">
