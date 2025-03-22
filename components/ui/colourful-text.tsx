@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 export default function ColourfulText({ text }: { text: string }) {
-  const colors = ["#f5eded", "#00e0ff"];
+  const colors = ["#667eea", "#fff"];
 
   const [currentColors, setCurrentColors] = React.useState(colors);
   const [count, setCount] = React.useState(0);

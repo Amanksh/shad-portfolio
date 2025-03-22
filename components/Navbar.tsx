@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { SiGithub, SiLeetcode, SiLinkedin } from "react-icons/si";
+import Title from "./ui/Title";
 
 const Navbar = () => {
   const socials = [
@@ -23,9 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className="py-10 w-[80%] mx-auto flex justify-between items-center">
-      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-[#00e0ff] -rotate-2">
-        Aman👨🏼‍💻
-      </h1>
+      <Title title="Aman👨🏼‍💻" />
       <div className="flex items-center gap-5">
         {socials.map((social, index) => {
           const Icon = social.icon;

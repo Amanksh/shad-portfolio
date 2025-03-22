@@ -6,7 +6,7 @@
 
 @theme {
   --color-regal-blue: #243c5a;
-  --color-main-blue: #00e0ff;
+  --color-main-blue: #667eea;
 }
 @theme inline {
   --color-background: var(--background);

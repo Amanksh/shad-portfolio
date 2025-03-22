@@ -1,8 +1,4 @@
 import React from "react";
-import {
-  TypewriterEffect,
-  TypewriterEffectSmooth,
-} from "./ui/typewriter-effect";
 import ColourfulText from "./ui/colourful-text";
 import Link from "next/link";
 
