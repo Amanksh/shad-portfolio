@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
+
 import { useState } from "react";
-import { IconType } from "react-icons";
 
 export const HoverEffect = ({
   items,
@@ -10,7 +9,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    Icon: IconType;
+    link: string;
   }[];
   className?: string;
 }) => {
@@ -19,12 +18,13 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-2 md:grid-cols-2  lg:grid-cols-3  py-1",
         className
       )}
     >
       {items.map((item, idx) => (
-        <div
+        <a
+          href={item?.link}
           key={idx}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -47,11 +47,12 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
-            <CardTitle>{item.title}</CardTitle>
-            {/* <CardDescription>{item.description}</CardDescription> */}
+          <Card className="text-center flex justify-center">
+            <CardTitle>
+              <img src={item.link} alt={item.title} className="h-8 w-8" />
+            </CardTitle>
           </Card>
-        </div>
+        </a>
       ))}
     </div>
   );
@@ -88,23 +89,5 @@ export const CardTitle = ({
     <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
-  );
-};
-export const CardDescription = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <p
-      className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
-      {children}
-    </p>
   );
 };
