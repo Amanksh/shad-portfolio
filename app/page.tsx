@@ -9,7 +9,7 @@ export default function Home() {
           <Navbar />
           <Hero />
         </div>
-        <div className="max-w-7xl mx-auto p-5 mt-20">
+        <div className="max-w-6xl mx-auto p-5 mt-20">
           <Skills />
         </div>
       </div>
