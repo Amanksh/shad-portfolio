@@ -1,10 +1,16 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] ">
+      <div className="min-h-screen relative">
+        {/* <BeamEffect /> */}
+        <BackgroundBeams />
         <div className="max-w-7xl mx-auto">
           <Navbar />
           <Hero />
@@ -12,6 +18,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto p-5 mt-20">
           <Skills />
         </div>
+        <Projects />
+        <Contact />
       </div>
     </>
   );
